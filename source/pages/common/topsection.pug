@@ -1,0 +1,27 @@
+section.section.hero
+    .hero__socials      
+        ul.socials
+          each item in ['vk', 'in', 'github']
+            li.socials__item
+              a(href="" class="socials__item--link")
+                svg(class=`social__item-pic socials__item-pic--${item}`)
+                  use(xlink:href=require(`../img/sprite/${item}.svg`).url)             
+    .hero__title
+        .section__title
+        img(src="", alt="").section__image--pic
+    .user.hero__user
+        .user__pic
+        img.user__pic-img(src=require("../img/ava.png"), alt="")
+        .user__description
+        .user__name Петя Отверткин
+        .user__info Личный сайт разработчика
+    .humburger.hero__hamburger &#9776
+    .arrow-down.hero__scroll-btn
+    .triangle
+      .triangle__wrapper 
+        .triangle__item
+          svg.svg-triangle.svg-triangle-left(viewBox="0 0 200 100" preserveAspectRatio="none")
+            polygon(points="0, 0 200, 100 0, 100")
+        .triangle__item
+          svg.svg-triangle.svg-triangle-right(viewBox="0 0 200 100" preserveAspectRatio="none")
+            polygon(points="0, 100 200, 0 200, 100")    

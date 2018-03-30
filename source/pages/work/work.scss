@@ -1,0 +1,130 @@
+.mywork {
+    background: #f8f9f5;
+}
+
+.work-title {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: #f8f9f5;
+}
+
+.svg-triangle.svg-triangle-left, .svg-triangle.svg-triangle-right {
+    fill: #f8f9f5;
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 750px;
+}
+
+.work__block-mywork {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.widget__about-work {
+    height: 100%;
+    width: 50%;
+    background: #ebefe2;
+}
+
+.about-work__block {
+    position: relative;
+    width: 325px;
+    height: 255px;
+    text-align: center;
+}
+
+.block-subtitle {
+    color: #566358;
+    font-size: 35px;
+    font-family: 'sansus_webissimoregular';
+}
+
+.widget__worklist {
+    width: 50%;
+    height: 525px;
+    background: #e1e4d7;
+    position: relative;
+}
+
+.widget__worklist-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    width: 458px;
+    height: 310px;
+}
+
+.about-work__tech {
+    margin-top: 60px;
+}
+
+.about-work__tech {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    color: #4e8839;
+}
+
+.about-work__button {
+    width: 200px;
+    height: 45px;
+    background: #6c9c5a;
+    border-radius: 100px;
+    padding-top: 11px;
+    color: #fff;
+    margin-top: 60px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.widget__controls {
+    display: flex;
+    height: 225px;
+    width: 50%;    
+}
+
+.conrtols__down-img{
+    background-image: url('./img/yoga.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    position: relative;
+}
+
+.controls__up-img {
+    width: 50%;
+    background-image: url('./img/trialog.png');
+    background-repeat: no-repeat;
+    background-position: center;   
+    position: relative; 
+}
+
+.controls__arrow-down {
+    background-image: url('./img/control_arrow_down.png');
+    width: 45px;
+    height: 30px;   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.controls__arrow-up {
+    background-image: url('./img/control_arrow_down.png');
+    width: 45px;
+    height: 30px;   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+}

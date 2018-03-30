@@ -1,0 +1,57 @@
+
+extends ../_template
+
+block variables
+  - var title = 'Мои работы'
+block content
+  include ../common/topsection.pug
+  section.mywork
+    .work-title
+      .block-subtitle МОИ РАБОТЫ
+    .maincontent
+      .widget
+        .widget__about-work
+          .about-work__block.work__block-mywork
+            .block-subtitle САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЕ
+            .about-work__tech HTML, CSS3, JAVASCRIPT
+            a.about-work__button-link(href="")
+              .about-work__button Посмотреть сайт
+        .widget__worklist
+          img.widget__worklist-img(src=require('./img/work-list.png'))
+        .widget__controls
+          .conrtols__down-img
+            .controls__arrow-down
+          .controls__up-img
+            .controls__arrow-up  
+  section.whatsay
+    .wahtsay-block
+      .section-title.whatsay__title ЧТО ОБО МНЕ ГОВОРЯТ
+    .whatsay__opinion
+      ul.opinion-list
+        li.opinion-list__item 
+          .opinion-ava
+            img.opinion-ava-img(src=require('./img/opinion-ava1.png'))
+          .opinion-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          .opinion-sign
+            .opinion-sign__name Ковальчук Дмитрий
+            .opinion-sign__position — основатель Loftschool
+        li.opinion-list__item 
+          .opinion-ava
+            img.opinion-ava-img(src=require('./img/opinion-ava1.png'))
+          .opinion-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          .opinion-sign
+            .opinion-sign__name Ковальчук Дмитрий
+            .opinion-sign__position — основатель Loftschool
+    .feedback.whatsay__feedback
+      .feedback-title
+        .block-subtitle Связаться со мной
+      form.feedback-form
+        input.feedback__edit(placeholder="Имя")
+        input.feedback__edit(placeholder="Email")
+        textarea.feedback__text(placeholder="Ваше сообщение")
+      ul.buttons.buttons__feedback
+          li.buttons__item.button__item-feedback Отправить
+          li.buttons__item.button__item-feedback Очистить          
+
+          
+    include ../common/footer.pug  

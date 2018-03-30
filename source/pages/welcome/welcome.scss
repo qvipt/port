@@ -1,0 +1,134 @@
+.welcome {
+    background-image: url('../img/forest.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.auth-button {
+    width: 180px;
+    height: 45px;
+    color: #fff;
+    border: 2px solid #fff;    
+    text-align: center;
+    border-radius: 100px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;    
+    padding-top: 9px;    
+}
+
+.auth-button__welcome {
+    position: absolute;
+    top: 20px;
+    right: 20px;    
+}
+
+.welcome-block {
+    position: absolute;
+    width: 380px;
+    height: 397px;
+    background: #2c4433;
+    opacity: .6;
+    top: 50%;
+    left: 50%;    
+    transform: translate(-50%, -50%);
+    text-align: center;    
+    border-radius: 2%;
+}
+
+.user {
+    opacity: 1;
+}
+
+.user-welcome {
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.social__welcome {
+    margin-top: 37px;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.buttons__welcome {
+    margin-top: 40px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.button__item-logon {
+    width: 50%;
+}
+
+.button__item-welcome {
+    width: 33%;
+}
+
+.buttons__item {
+    height: 44px;
+    background: #618f54;
+    align-items: center;    
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+
+    &:hover {
+        background: #477c37;
+    }
+}
+
+.footer-welcome-text {
+    font-weight: 400;
+    position: absolute;
+    bottom: 44px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.auth-block__welcome {
+    top: 0;
+    left: 0;
+    transform: translate(0,0);
+}
+
+.auth-block__title {
+    color: #fff;
+    &:after {
+        background: #fff;
+    }
+}
+
+.auth-edit {
+    border-radius: 100px;
+    border: 0;
+    width: 340px;
+    height: 45px;
+    margin-top: 20px;
+}
+
+.auth-block__title {
+    margin-bottom: 60px;
+}
+
+.auth-form-text {
+    font-family: 'Robot';
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.areYouHuman-text {
+    font-family: 'Robot';
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;   
+}

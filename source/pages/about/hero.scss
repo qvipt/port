@@ -1,0 +1,85 @@
+.hero {
+    background-image: url('../img/forest.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.humburger {
+    color: #fff;
+    cursor: pointer;
+    font-size: 37px;
+}
+
+.hero__hamburger {
+    position: absolute;
+    right: 29px;
+    top: 33px;
+}
+
+.hero__socials {
+    position: absolute;
+    top: 33px;
+    left: 30px;
+}
+
+.socials {
+    display: flex;
+    width: 140px;
+    height: 30px;
+    justify-content: space-between;
+    align-items: flex-end;    
+}
+
+.socials__item {
+    align-items: flex-end;
+}
+
+.social__item-pic {
+    width: 28px;
+    height: 25px;
+    &:hover{
+        fill: red;
+    }
+}
+
+.user {
+    width: 314px;
+    height: 228px;
+    text-align: center;
+}
+
+.hero__user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.user__name {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 35px;
+    color: #fff;
+}
+
+.user__info {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+.arrow-down {
+    background-image: url('../img/arrow_down.png');
+    width: 26px;
+    height: 16px;    
+}
+
+.hero__scroll-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%);
+}
+

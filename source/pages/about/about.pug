@@ -1,0 +1,66 @@
+
+extends ../_template
+
+block variables
+  - var title = 'Главная страница'
+block content
+  include ../common/topsection.pug
+  section.section.about
+    .about__left
+      .section-title.title__left ОБО МНЕ
+      .user-description
+        .user-description__image
+          img.user-description__avatar(src=require("./img/photo.png"))
+        .user-description__title
+          .block-subtitle КТО Я
+        .user-description__text.text-content
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, voluptas ex? Nesciunt quos sapiente, atque quis temporibus optio pariatur ab enim iste fugiat repudiandae repellendus? Deleniti vel quas maxime quos!
+    .about__right
+      .about__right-title
+        .block-subtitle Чем я могу быть вам полезен
+      .about__right-description.text-content
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam cupiditate reprehenderit dolores vel odio nam, non incidunt iusto error autem inventore accusantium dignissimos voluptatibus dolorum quod obcaecati necessitatibus perspiciatis earum.
+      .about__right-content
+        ul.skills-list
+          -
+            var skills = {
+              'Frontend' : [{title: 'html', procent: 10}, {title: 'css3', procent: 20}, {title: 'JavaScript & jQuery', procent: 30}],
+              'Backend' : [{title: 'php', procent: 40}, {title: 'mySQL', procent: 50}, {title: 'Node.js & npm', procent: 60}, {title: 'mongo.db', procent: 70}],
+              'Workflow' : [{title: 'git', procent: 80}, {title: 'Gulp', procent: 90}, {title: 'webpack', procent: 100}]
+            }
+          each value, key in skills
+            li.skills-list__item
+              .skills__row
+                .skills__row-title #{key}
+                ul.skills__row-list              
+                  mixin skill(procent, title)
+                    li.skills__row-list--item
+                      .skill(procent=`${procent}`)
+                        svg.skill__circle(width="110" height="110")
+                          circle.circle(r="45" cx="55" cy="55")
+                          circle.circle__procent(r="45" cx="55" cy="55" transform="rotate(-90, 55, 55)")
+                        .skill__title #{title}
+                  each sk in value
+                    +skill(sk.procent, sk.title)
+  section.section.map
+    .google-map
+
+    .contacts.map__contacts
+      .contacts__title
+        .block-subtitle КОНТАКТЫ
+      ul.contacts_list
+        - 
+          var contacts = [
+            ['skype', 'skype_kdn'],
+            ['envelope', 'astahov@gmail.com'],
+            ['phone', '+79211 123 23 23'],
+            ['map_marker', 'Новосибирск'],
+          ]
+        each contact in contacts
+          li.contacts__item
+            .contacts-row
+              .contacts-row__icon 
+                svg(class="contact__row-pic")
+                  use(xlink:href=require(`./img/sprite/${contact[0]}.svg`).url)  
+              .contacts-row__content #{contact[1]}
+    include ../common/footer.pug
