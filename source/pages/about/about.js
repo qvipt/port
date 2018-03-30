@@ -13,6 +13,6 @@ window.initMap = function(){
     
     var map = new google.maps.Map(document.querySelector('.google-map'), {
         center: coordinates,
-        zoom: 8
+        zoom: 9
     });
 }
