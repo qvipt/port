@@ -9,9 +9,10 @@ import './hero.scss';
 
 window.initMap = function(){
 //    console.log('initMap');
-    var coordinates = {lat: 55.744063, lng: 37.618737},
+    var coordinates = {lat: 55.744063, lng: 37.618737};
     
-    map = new google.maps.Map(document.querySelector('.google-map'), {
-        center: coordinates
+    var map = new google.maps.Map(document.querySelector('.google-map'), {
+        center: coordinates,
+        zoom: 8
     });
 }
