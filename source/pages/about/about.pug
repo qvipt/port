@@ -38,7 +38,7 @@ block content
                       .skill(procent=`${procent}`)
                         svg.skill__circle(width="110" height="110")
                           circle.circle(r="45" cx="55" cy="55")
-                          circle.circle__procent(r="5" cx="55" cy="55" transform="rotate(-90, 55, 55)")
+                          circle.circle__procent(r="45" cx="55" cy="55" transform="rotate(-90, 55, 55)")
                         .skill__title #{title}
                   each sk in value
                     +skill(sk.procent, sk.title)

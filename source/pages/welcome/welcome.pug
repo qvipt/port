@@ -4,8 +4,7 @@ block variables
   - var title = 'Welcome'
 block content
   section.welcome
-    a.auth-link(href="")
-      .auth-button.auth-button__welcome Авторизоваться
+    button.auth-button.auth-button__welcome(type="button") Авторизоваться
     .welcome-block
       .user.user-welcome
         .user__pic
@@ -29,15 +28,20 @@ block content
           .block-subtitle.auth-block__title Авторизуйтесь
           form.auth-block__form
             .auth-login-pass
-              input.auth-edit
-              input.auth-edit
+              input.auth-edit.edit-login(placeholder="Логин")
+              input.auth-edit.edit-pass(placeholder="Пароль")
             .captcha
-                input.auth-block__ishuman(type="checkbox")
-                .auth-form-text Я человек
-                .areYouHuman-text Вы точно не робот?
+                .ishuman-block
+                  input.ishuman-block-checkbox(type="checkbox")
+                  .ishuman-block-text Я человек
+                .areYouHuman-text Вы точно не робот?                
                 .areYouHuman-select
-                  input.auth-block__human-question(type="radio" name="human")
-                  input.auth-block__human-question(type="radio" name="human")
+                  .captcha-radio
+                    input.auth-block__human-question(type="radio" name="human")
+                    div.captcha__radio-text Да
+                  .captcha-radio
+                    input.auth-block__human-question(type="radio" name="human")
+                    .captcha__radio-text Не уверен
         ul.buttons.buttons__welcome
            li.buttons__item.button__item-logon На главную 
            li.buttons__item.button__item-logon Войти

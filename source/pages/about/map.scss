@@ -13,7 +13,7 @@
 
 .contacts {
     width: 380px;
-    height: 308px;
+    height: 310px;
     background: #f4f5f0;
     opacity: .85;
     border-radius: 2%;
@@ -21,7 +21,7 @@
 
 .contacts__title {
     text-align: center;
-    padding-top: 39px;
+    margin-top: 37px;
     padding-bottom: 60px;
 }
 
@@ -31,14 +31,15 @@
 }
 
 .contacts__item {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .contacts-row {
     display: flex;
+    align-items: center;;
 }
 
-.contact__row-pic {
+.contact__row-pic, .contacts-row__icon {
     width: 26px;
     height: 26px;
 }

@@ -1,5 +1,6 @@
 
 import 'normalize.css';
+import 'jquery';
 import '../../common/layout.scss';
 import '../../common/fonts.scss'
 import '../common/footer.scss';
@@ -13,6 +14,16 @@ window.initMap = function(){
     
     var map = new google.maps.Map(document.querySelector('.google-map'), {
         center: coordinates,
-        zoom: 9
+        zoom: 14
     });
+}
+
+window.onscroll = function() {
+    var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    console.log(scrolled + 'px');
+    if (scrolled > 450) {
+        var a = $('.skill');
+        console.log(a);
+    }
+
 }
