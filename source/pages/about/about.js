@@ -1,12 +1,12 @@
 
 import 'normalize.css';
-import 'jquery';
 import '../../common/layout.scss';
 import '../../common/fonts.scss'
 import '../common/footer.scss';
 import './map.scss'
 import './aboutme.scss'
 import './hero.scss';
+
 
 window.initMap = function(){
 //    console.log('initMap');
@@ -20,10 +20,16 @@ window.initMap = function(){
 
 window.onscroll = function() {
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    console.log(scrolled + 'px');
-    if (scrolled > 450) {
-        var a = $('.skill');
-        console.log(a);
-    }
-
+    var skills = document.querySelectorAll('.skill');
+    skills.forEach((item, i)  => {
+        var svgTop = item.getBoundingClientRect().top;        
+        if (scrolled - svgTop > 0 && !item.attributes.flag) {
+            item.attributes.flag = 1;
+//            console.log(item.attributes.procent.value);
+            var procent = item.attributes.procent.value;
+            var skill = item.querySelector('.circle__procent');
+            skill.style.strokeDashoffset = 314 - 283 / 100 * procent;
+        }              
+    });
 }
+

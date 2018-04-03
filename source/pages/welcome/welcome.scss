@@ -29,14 +29,17 @@
 
 .welcome-block {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 380px;
     height: 400px;
     background: rgba(#2c4433, .6);
-    top: 50%;
-    left: 50%;    
-    transform: translate(-50%, -50%);
+    //top: 50%;
+    //left: 50%;    
+    //transform: translate(-50%, -50%);
     text-align: center;    
     border-radius: 2%;
+    backface-visibility: hidden;    
 }
 
 .user {
@@ -94,11 +97,11 @@
     transform: translate(-50%);
 }
 
-.auth-block__welcome {
-    top: 0;
-    left: 0;
-    transform: translate(0,0);
-}
+// .auth-block__welcome {
+//      top: 0;
+//      left: 0;
+// //     transform: translate(0,0);
+// }
 
 .auth-block__title {
     margin-top: 25px;
