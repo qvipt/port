@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const svgSpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const webpack = require('webpack');
 
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -65,7 +66,13 @@ module.exports = {
         }),
         new svgSpriteLoaderPlugin({
             plainSprite: true
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.$': 'jquery'
         })
+
     ],
     module: {
         rules: [

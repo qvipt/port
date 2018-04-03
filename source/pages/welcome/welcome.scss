@@ -10,14 +10,15 @@
 .auth-button {
     width: 180px;
     height: 45px;
-    color: #fff;
     border: 2px solid #fff;    
-    text-align: center;
     border-radius: 100px;
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;    
-    padding-top: 9px;    
+    background: rgba(#000, 0);    
+    color: #fff;
+    cursor: pointer;
+    outline: none;    
 }
 
 .auth-button__welcome {
@@ -28,15 +29,17 @@
 
 .welcome-block {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 380px;
-    height: 397px;
-    background: #2c4433;
-    opacity: .6;
-    top: 50%;
-    left: 50%;    
-    transform: translate(-50%, -50%);
+    height: 400px;
+    background: rgba(#2c4433, .6);
+    //top: 50%;
+    //left: 50%;    
+    //transform: translate(-50%, -50%);
     text-align: center;    
     border-radius: 2%;
+    backface-visibility: hidden;    
 }
 
 .user {
@@ -94,16 +97,26 @@
     transform: translate(-50%);
 }
 
-.auth-block__welcome {
-    top: 0;
-    left: 0;
-    transform: translate(0,0);
-}
+// .auth-block__welcome {
+//      top: 0;
+//      left: 0;
+// //     transform: translate(0,0);
+// }
 
 .auth-block__title {
+    margin-top: 25px;
     color: #fff;
     &:after {
         background: #fff;
+    }
+}
+
+.auth-login-pass {
+    &:before {
+        content:"";
+        width: 45px;
+        height: 45px;
+        background: red;
     }
 }
 
@@ -113,17 +126,32 @@
     width: 340px;
     height: 45px;
     margin-top: 20px;
+    outline: none;
+    font-family: 'Roboto';
+    color: #373e42;
+    font-weight: 400;
+    padding-left: 65px;
 }
 
 .auth-block__title {
     margin-bottom: 60px;
 }
 
-.auth-form-text {
+.ishuman-block-text {
     font-family: 'Robot';
     color: #fff;
     font-size: 16px;
     font-weight: 400;
+    margin-left: 10px;
+}
+
+.captcha {
+    margin-top: 21px;
+}
+
+.ishuman-block {
+    display: flex;
+    justify-content: center;
 }
 
 .areYouHuman-text {
@@ -131,4 +159,24 @@
     color: #fff;
     font-size: 16px;
     font-weight: 700;   
+    margin-top: 25px;
+}
+
+.captcha-radio, .areYouHuman-select {
+    display: flex;
+    justify-content: center;
+}
+
+.areYouHuman-select {
+    margin-top: 14px;
+}
+
+.captcha__radio-text {
+    color: #fff;
+    margin-left: 10px;
+}
+
+
+.captcha-radio:nth-child(2) {
+    margin-left: 50px;
 }

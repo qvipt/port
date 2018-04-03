@@ -89,6 +89,7 @@
 }
 
 .block-subtitle {
+    line-height: .8;
     font-size: 35px;
     font-family: 'sansus_webissimoregular';
     color: #373e42;    
@@ -177,6 +178,7 @@
     stroke: #74a163;
     stroke-width: 20px;
     fill: none;
-    stroke-dasharray:314;
-    stroke-dashoffset:100;    
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+    transition: .8s;
 }

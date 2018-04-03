@@ -1,0 +1,16 @@
+.flip__container {
+   // perspective: 800px;
+}
+
+.flip__card {
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.back {
+    transform: rotateY( 180deg );
+}
+
+.flipped {
+    transform: rotateY( 180deg );    
+}
