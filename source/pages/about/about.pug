@@ -3,6 +3,7 @@ extends ../_template
 
 block variables
   - var title = 'Главная страница'
+
 block content
   include ../common/topsection.pug
   section.section.about
@@ -64,3 +65,4 @@ block content
                   use(xlink:href=require(`./img/sprite/${contact[0]}.svg`).url)  
               .contacts-row__content #{contact[1]}
     include ../common/footer.pug
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH962LfFFhgA1MQ4ArMFkzN1qmU6pjJ8Y&callback=initMap")

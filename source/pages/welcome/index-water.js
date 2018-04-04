@@ -3,7 +3,7 @@ import Haze from './haze';
 import shader from './shaders/haze-water.frag';
 import TweenLite from 'gsap'
 
-const divSelector = '.welcome';
+const divSelector = '.background';
 const canvasSelector = '.Background-canvas';
 const filePath = require('./img/water.jpg');
 const fileMapsPath = require('./img/water-maps.jpg');

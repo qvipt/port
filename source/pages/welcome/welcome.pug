@@ -4,48 +4,49 @@ block variables
   - var title = 'Welcome'
 block content
   section.welcome
+    .background
       canvas.Background-canvas
-      button.auth-button.auth-button__welcome(type="button") Авторизоваться
-      .flip__container    
-        .flip__card
-          .welcome-block.front
-            .user.user-welcome
-              .user__pic
-                  img.user__pic-img(src=require("../img/ava.png"), alt="")
-              .user__description
-                  .user__name Петя Отверткин
-                  .user__info Личный сайт разработчика
-              ul.socials.social__welcome
-                - var socials = ['vk', 'github', 'in']
-                each social in socials
-                  li.social__item
-                    a.social__link(href="", class=`social__link-${social}`)
-                      svg(class="social-pic")
-                        use(xlink:href=require(`../img/sprite/${social}.svg`).url)                   
+    button.auth-button.auth-button__welcome(type="button") Авторизоваться
+    .flip__container    
+      .flip__card
+        .welcome-block.front
+          .user.user-welcome
+            .user__pic
+                img.user__pic-img(src=require("../img/ava.png"), alt="")
+            .user__description
+                .user__name Петя Отверткин
+                .user__info Личный сайт разработчика
+            ul.socials.social__welcome
+              - var socials = ['vk', 'github', 'in']
+              each social in socials
+                li.social__item
+                  a.social__link(href="", class=`social__link-${social}`)
+                    svg(class="social-pic")
+                      use(xlink:href=require(`../img/sprite/${social}.svg`).url)                   
+          ul.buttons.buttons__welcome
+            li.buttons__item.button__item-welcome Мои работы
+            li.buttons__item.button__item-welcome Обо мне
+            li.buttons__item.button__item-welcome Блог
+        .welcome-block.auth-block__welcome.back
+            .auth-block
+              .block-subtitle.auth-block__title Авторизуйтесь
+              form.auth-block__form
+                .auth-login-pass
+                  input.auth-edit.edit-login(placeholder="Логин")
+                  input.auth-edit.edit-pass(placeholder="Пароль")
+                .captcha
+                    .ishuman-block
+                      input.ishuman-block-checkbox(type="checkbox")
+                      .ishuman-block-text Я человек
+                    .areYouHuman-text Вы точно не робот?                
+                    .areYouHuman-select
+                      .captcha-radio
+                        input.auth-block__human-question(type="radio" name="human")
+                        div.captcha__radio-text Да
+                      .captcha-radio
+                        input.auth-block__human-question(type="radio" name="human")
+                        .captcha__radio-text Не уверен
             ul.buttons.buttons__welcome
-              li.buttons__item.button__item-welcome Мои работы
-              li.buttons__item.button__item-welcome Обо мне
-              li.buttons__item.button__item-welcome Блог
-          .welcome-block.auth-block__welcome.back
-              .auth-block
-                .block-subtitle.auth-block__title Авторизуйтесь
-                form.auth-block__form
-                  .auth-login-pass
-                    input.auth-edit.edit-login(placeholder="Логин")
-                    input.auth-edit.edit-pass(placeholder="Пароль")
-                  .captcha
-                      .ishuman-block
-                        input.ishuman-block-checkbox(type="checkbox")
-                        .ishuman-block-text Я человек
-                      .areYouHuman-text Вы точно не робот?                
-                      .areYouHuman-select
-                        .captcha-radio
-                          input.auth-block__human-question(type="radio" name="human")
-                          div.captcha__radio-text Да
-                        .captcha-radio
-                          input.auth-block__human-question(type="radio" name="human")
-                          .captcha__radio-text Не уверен
-              ul.buttons.buttons__welcome
-                li.buttons__item.button__item-logon На главную 
-                li.buttons__item.button__item-logon Войти
-      .footer-text.footer-welcome-text (c) Петя Отверткин
+              li.buttons__item.button__item-logon На главную 
+              li.buttons__item.button__item-logon Войти
+    .footer-text.footer-welcome-text (c) Петя Отверткин

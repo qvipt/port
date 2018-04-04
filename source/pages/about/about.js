@@ -8,7 +8,7 @@ import './aboutme.scss'
 import './hero.scss';
 
 
-window.initMap = function(){
+function initMap(){
 //    console.log('initMap');
     var coordinates = {lat: 55.744063, lng: 37.618737};
     
@@ -17,6 +17,8 @@ window.initMap = function(){
         zoom: 14
     });
 }
+
+window.initMap = initMap();
 
 function parallax(obj, speed) {
     var scrolled = - window.pageYOffset || document.documentElement.scrollTop;
