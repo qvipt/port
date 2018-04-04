@@ -118,6 +118,10 @@ module.exports = {
                     extract: true,
                     spriteFilename: 'images/sprite.svg'
                 }
+            },
+            {
+              test: /\.(frag|vert)$/,
+              loader: 'webpack-glsl-loader'
             }
         ]
     }
