@@ -1,4 +1,16 @@
 section.section.hero
+    .hero_bg
+      img.hero_bg-img(src=require('../img/forest.png'))
+    .hero__title
+      .hero__title-block
+        img.hero__title-img(src=require('../about/img/portfolio_header.png'))
+    .user.hero__user
+      .user__block
+        .user__pic
+        img.user__pic-img(src=require("../img/ava.png"), alt="")
+        .user__description
+        .user__name Петя Отверткин
+        .user__info Личный сайт разработчика
     .hero__socials      
         ul.socials
           each item in ['vk', 'in', 'github']
@@ -6,15 +18,6 @@ section.section.hero
               a(href="" class="socials__item--link")
                 svg(class=`social__item-pic socials__item-pic--${item}`)
                   use(xlink:href=require(`../img/sprite/${item}.svg`).url)             
-    .hero__title
-        .section__title
-        img(src="", alt="").section__image--pic
-    .user.hero__user
-        .user__pic
-        img.user__pic-img(src=require("../img/ava.png"), alt="")
-        .user__description
-        .user__name Петя Отверткин
-        .user__info Личный сайт разработчика
     .humburger.hero__hamburger &#9776
     .arrow-down.hero__scroll-btn
     .triangle
