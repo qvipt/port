@@ -12,17 +12,79 @@ block content
       .widget
         .widget__about-work
           .about-work__block.work__block-mywork
-            .block-subtitle САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЕ
-            .about-work__tech HTML, CSS3, JAVASCRIPT
-            a.about-work__button-link(href="")
-              .about-work__button Посмотреть сайт
-        .widget__worklist
-          img.widget__worklist-img(src=require('./img/work-list.png'))
+            ul.about-work__list
+              -
+                var sitesInfo = [
+                  ['САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЕ','HTML, CSS3, JAVASCRIPT'],
+                  ['САЙТ 2','HTML, CSS3, JAVASCRIPT'],
+                  ['САЙТ 3','NODE, CSS3, JAVASCRIPT'],
+                  ['САЙТ 4','PYTON, CSS3, JAVASCRIPT'],
+
+                ]
+              each info, index in sitesInfo
+                if index == 2
+                  li.slider__list-item.slide__list-item--active
+                    .about-work__block
+                      .block-subtitle #{info[0]}
+                      .about-work__tech #{info[1]}
+                      a.about-work__button-link(href="")
+                        .about-work__button Посмотреть сайт
+                else 
+                  li.slider__list-item
+                    .about-work__block
+                      .block-subtitle #{info[0]}
+                      .about-work__tech #{info[1]}
+                      a.about-work__button-link(href="")
+                        .about-work__button Посмотреть сайт
+        .widget__workpreview
+          .slider__preview            
+            ul.widget__worklist
+              li.slider__list-item
+                img.widget__worklist-img(src=require('./img/work-4.png'))
+                span.slide__number 4
+              li.slider__list-item.slide__list-item--active
+                img.widget__worklist-img(src=require('./img/work-3.png'))
+                span.slide__number 3               
+              li.slider__list-item
+                img.widget__worklist-img(src=require('./img/work-2.png'))
+                span.slide__number 2               
+              li.slider__list-item
+                img.widget__worklist-img(src=require('./img/work-1.png'))
+                span.slide__number 1               
+                
         .widget__controls
-          .conrtols__down-img
-            .controls__arrow-down
-          .controls__up-img
-            .controls__arrow-up  
+          .slider__controls            
+            .slider__controls-block
+              ul.slider__downList              
+                li.slider__list-item
+                  img.slider__item-img(src=require('./img/work-1.png'))
+                  span.slide__number 1                 
+                li.slider__list-item.slide__list-item--active
+                  img.slider__item-img(src=require('./img/work-2.png'))
+                  span.slide__number 2
+                li.slider__list-item
+                  img.slider__item-img(src=require('./img/work-3.png'))
+                  span.slide__number 3                  
+                li.slider__list-item
+                  img.slider__item-img(src=require('./img/work-4.png'))
+                  span.slide__number 4                  
+              .controls__arrow-down
+          .slider__controls
+            .slider__controls-block          
+              ul.slider__upList
+                li.slider__list-item.slide__list-item--active
+                  img.slider__item-img(src=require('./img/work-4.png'))
+                  span.slide__number 4                  
+                li.slider__list-item
+                  img.slider__item-img(src=require('./img/work-3.png'))
+                  span.slide__number 3                  
+                li.slider__list-item
+                  img.slider__item-img(src=require('./img/work-2.png'))
+                  span.slide__number 2                  
+                li.slider__list-item
+                  img.slider__item-img(src=require('./img/work-1.png'))
+                  span.slide__number 1                  
+              .controls__arrow-up
   section.whatsay
     .wahtsay-block
       .section-title.whatsay__title ЧТО ОБО МНЕ ГОВОРЯТ
