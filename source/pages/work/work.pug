@@ -22,20 +22,12 @@ block content
 
                 ]
               each info, index in sitesInfo
-                if index == 2
-                  li.slider__list-item.slide__list-item--active
-                    .about-work__block
-                      .block-subtitle #{info[0]}
-                      .about-work__tech #{info[1]}
-                      a.about-work__button-link(href="")
-                        .about-work__button Посмотреть сайт
-                else 
-                  li.slider__list-item
-                    .about-work__block
-                      .block-subtitle #{info[0]}
-                      .about-work__tech #{info[1]}
-                      a.about-work__button-link(href="")
-                        .about-work__button Посмотреть сайтgi
+                li.slider__list-item(class=(index == 2 ? 'slide__list-item--active' : ''))
+                  .about-work__block
+                    .block-subtitle #{info[0]}
+                    .about-work__tech #{info[1]}
+                    a.about-work__button-link(href="")
+                      .about-work__button Посмотреть сайт
         .widget__workpreview
           .slider__preview            
             ul.widget__worklist

@@ -17,6 +17,7 @@ module.exports = {
         'welcome': PATHS.source + '/pages/welcome/welcome.js',
         'blog': PATHS.source + '/pages/blog/blog.js',
         'work': PATHS.source + '/pages/work/work.js',
+        'vue': PATHS.source + '/pages/vue.test/vue.test.js',
     },
     output: {
         path: PATHS.build
@@ -59,6 +60,11 @@ module.exports = {
             filename: 'work.html',
             chunks: ['work', 'common'],
             template: PATHS.source + '/pages/work/work.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'vue.html',
+            chunks: ['vue', 'common'],
+            template: PATHS.source + '/pages/vue.test/vue.test.pug'
         }),
         new ExtractTextPlugin('./css/[name].css'),
         new OptimizeCssAssetsPlugin({

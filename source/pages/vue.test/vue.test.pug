@@ -1,0 +1,31 @@
+
+extends ../_template
+
+block variables
+  - var title = 'VUE TEST'
+block content
+  section.mywork
+    #app
+      widget-about(:title='title' :info='sitesInfo')
+    
+    
+    script(type="text/x-template" id="itemInfo")  
+      li.slider__list-item(v-if="index == 2" class='slide__list-item--active')
+        .about-work__block
+          .block-subtitle {{info[0]}}
+          .about-work__tech {{info[1]}}
+          a.about-work__button-link(href="")
+            .about-work__button Посмотреть сайт    
+      
+    script(type = "text/x-template" id = "widget")
+      .widget
+        .work-title
+          .block-subtitle {{title}}
+        .maincontent
+          .widget
+            .widget__about-work
+              .about-work__block.work__block-mywork    
+                ul.about-work__list
+                  item(v-for="siteInfo, index in info" :info="siteInfo" :index="index")
+            .controls__arrow-up
+            .controls__arrow-down

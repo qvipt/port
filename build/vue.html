@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VUE TEST</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;amp;subset=cyrillic" rel="stylesheet">
+  <link href="./css/common.css" rel="stylesheet"><link href="./css/vue.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper">
+      <section class="mywork">
+        <div id="app">
+          <widget-about :title="title" :info="sitesInfo"></widget-about>
+        </div>
+        <script type="text/x-template" id="itemInfo"> 
+          <li class="slider__list-item slide__list-item--active" v-if="index == 2">
+            <div class="about-work__block">
+              <div class="block-subtitle">{{info[0]}}</div>
+              <div class="about-work__tech">{{info[1]}}</div><a class="about-work__button-link" href="">
+                <div class="about-work__button">Посмотреть сайт    </div></a>
+            </div>
+          </li>
+        </script>
+        <script type="text/x-template" id="widget">
+          <div class="widget">
+            <div class="work-title">
+              <div class="block-subtitle">{{title}}</div>
+            </div>
+            <div class="maincontent">
+              <div class="widget">
+                <div class="widget__about-work">
+                  <div class="about-work__block work__block-mywork">   
+                    <ul class="about-work__list">
+                      <item v-for="siteInfo, index in info" :info="siteInfo" :index="index"></item>
+                    </ul>
+                  </div>
+                </div>
+                <div class="controls__arrow-up"></div>
+                <div class="controls__arrow-down"></div>
+              </div>
+            </div>
+          </div>
+        </script>
+      </section>
+    </div>
+  <script type="text/javascript" src="common.js"></script><script type="text/javascript" src="vue.js"></script></body>
+</html>
