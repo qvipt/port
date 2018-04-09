@@ -1,23 +1,17 @@
 import Vue from 'vue/dist/vue.js';
 
-Vue.component('item',{
-    template: '#itemInfo',
-    props: ['info', 'index']
-});
-
 Vue.component('widget-about', {
-    template: '#widget',
-    props: ['title', 'info']
+    template: '#widget-about-left',
+    props: ['info']
 });
 
 const app = new Vue({
     data: {
-        title: 'Мои работы',
         sitesInfo: [
-            ['САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЕ','HTML, CSS3, JAVASCRIPT'],
-            ['САЙТ 2','HTML, CSS3, JAVASCRIPT'],
-            ['САЙТ 3','NODE, CSS3, JAVASCRIPT'],
-            ['САЙТ 4','PYTON, CSS3, JAVASCRIPT'],
+            ['САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЕ','HTML, CSS3, JAVASCRIPT', './img/work-1.png'],
+            ['САЙТ 2','HTML, CSS3, JAVASCRIPT', './img/work-2.png'],
+            ['САЙТ 3','NODE, CSS3, JAVASCRIPT', './img/work-3.png'],
+            ['САЙТ 4','PYTON, CSS3, JAVASCRIPT', './img/work-4.png'],
 
           ]         
     }

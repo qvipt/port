@@ -16,4 +16,10 @@ $('.auth-button').on('click', e =>  {
 })
 
 
+$('.flip_element').on('click', e =>  {
+    e.preventDefault;
+    $('.flip__card').toggleClass('flipped');
+ })
+
+
 

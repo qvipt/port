@@ -7,12 +7,17 @@
     align-items: center;
 }
 
+label {
+    cursor: pointer;    
+}
+
 .background {
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
-	left: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 .background:after {
@@ -82,7 +87,9 @@
 }
 
 .buttons__welcome {
-    margin-top: 40px;
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
 }
 
 .buttons {
@@ -94,7 +101,7 @@
 }
 
 .button__item-welcome {
-    width: 33%;
+    width: 33.33%;
 }
 
 .buttons__item {
@@ -103,15 +110,21 @@
     align-items: center;    
     justify-content: center;
     display: flex;
-    color: #fff;
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 16px;
 
     &:hover {
         background: #477c37;
     }
 }
+
+.auth-button__link {
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 .footer-welcome-text {
     font-weight: 400;
@@ -135,48 +148,62 @@
     }
 }
 
+.auth-block__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.auth__field-pic {
+    background: #f0efe9;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth__field-img {
+    width: 17px;
+    height: 17px;
+}
+
 .auth-login-pass {
-    &:before {
-        content:"";
-        width: 45px;
-        height: 45px;
-        background: red;
-    }
+    width: 80%;
+}
+
+.auth__field {
+    border-radius: 100px;
+    overflow: hidden;
+    height: 45px;
+    margin-top: 20px; 
+    display: flex;   
 }
 
 .auth-edit {
-    border-radius: 100px;
     border: 0;
-    width: 340px;
+    width: 85%;
     height: 45px;
-    margin-top: 20px;
     outline: none;
     font-family: 'Roboto';
     color: #373e42;
     font-weight: 400;
-    padding-left: 65px;
+    padding-left: 15px;
 }
 
 .auth-block__title {
-    margin-bottom: 60px;
+    margin-bottom: 42px;
 }
 
-.ishuman-block-text {
-    font-family: 'Robot';
-    color: #fff;
-    font-size: 16px;
-    font-weight: 400;
-    margin-left: 10px;
-}
 
 .captcha {
     margin-top: 21px;
 }
 
-.ishuman-block {
-    display: flex;
-    justify-content: center;
-}
+// .ishuman-block {
+//     display: flex;
+//     justify-content: center;
+// }
 
 .areYouHuman-text {
     font-family: 'Robot';
@@ -197,10 +224,75 @@
 
 .captcha__radio-text {
     color: #fff;
-    margin-left: 10px;
 }
 
 
 .captcha-radio:nth-child(2) {
     margin-left: 50px;
 }
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox-text {
+    color: #fff;
+}
+
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox__styled, .radio__styled {
+    border-radius: 3px;
+    background: #6c9c5a;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.svg__checked {
+    fill: #fff;
+    height: 13px;
+    width: 13px;
+    display: none;
+}
+
+.checkbox-input:checked + .checkbox__styled .svg__checked{
+   display: block;
+}
+
+.auth-block__human-question {
+    display: none;
+}
+
+.radio__styled {
+    border-radius: 50%;
+    background: #fff;
+    &:before {
+        width: 8px;
+        height: 8px;
+        content: "";
+        border-radius: 50%;
+        background: #6c9c5a;
+        position: absolute;
+        display: none;
+    }
+}
+
+.auth-block__human-question:checked + .radio__styled:before {
+    display: block;
+}
+
+.auth-block__human-question:checked ~ .captcha__radio-text {
+    color: #6c9c5a;
+}
+
+
+

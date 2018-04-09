@@ -43,6 +43,7 @@ function moveSlide(classList, direction, prop, speed) {
 function sliderRoutine(){
     var up = $('.controls__arrow-up');
     up.on('click', e => {
+        console.log('up');
         moveSlide('.about-work__list', 'next', 'top', 0);
     })
 

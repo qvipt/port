@@ -24,29 +24,48 @@ block content
                     svg(class="social-pic")
                       use(xlink:href=require(`../img/sprite/${social}.svg`).url)                   
           ul.buttons.buttons__welcome
-            li.buttons__item.button__item-welcome Мои работы
-            li.buttons__item.button__item-welcome Обо мне
-            li.buttons__item.button__item-welcome Блог
+            li.buttons__item.button__item-welcome 
+              a.auth-button__link(href="./work.html") Мои работы
+            li.buttons__item.button__item-welcome
+              a.auth-button__link(href="./about.html") Обо мне
+            li.buttons__item.button__item-welcome
+              a.auth-button__link(href="./blog.html") Блог            
         .welcome-block.auth-block__welcome.back
             .auth-block
               .block-subtitle.auth-block__title Авторизуйтесь
               form.auth-block__form
                 .auth-login-pass
-                  input.auth-edit.edit-login(placeholder="Логин")
-                  input.auth-edit.edit-pass(placeholder="Пароль")
+                  .auth__field
+                    .auth__field-pic
+                      svg(class="auth__field-img")
+                        use(xlink:href=require(`../img/sprite/login.svg`).url)                   
+                    input.auth-edit.edit-login(placeholder="Логин")
+                  .auth__field
+                    .auth__field-pic                  
+                      svg(class="auth__field-img")
+                        use(xlink:href=require(`../img/sprite/password.svg`).url)                    
+                    input.auth-edit.edit-pass(placeholder="Пароль")
                 .captcha
-                    .ishuman-block
-                      input.ishuman-block-checkbox(type="checkbox")
-                      .ishuman-block-text Я человек
+                    label.checkbox(for="check1")
+                      input.checkbox-input(type="checkbox" id="check1")
+                      span.checkbox__styled
+                        svg(class="svg__checked")
+                          use(xlink:href=require(`../img/sprite/checked.svg`).url) 
+                      span.checkbox-text Я человек
                     .areYouHuman-text Вы точно не робот?                
                     .areYouHuman-select
-                      .captcha-radio
+                      label.captcha-radio
                         input.auth-block__human-question(type="radio" name="human")
-                        div.captcha__radio-text Да
-                      .captcha-radio
+                        span.radio__styled
+                        .captcha__radio-text Да
+                      label.captcha-radio
                         input.auth-block__human-question(type="radio" name="human")
+                        span.radio__styled                        
                         .captcha__radio-text Не уверен
             ul.buttons.buttons__welcome
-              li.buttons__item.button__item-logon На главную 
-              li.buttons__item.button__item-logon Войти
+              li.buttons__item.button__item-logon
+                a.auth-button__link.flip_element На главную
+              li.buttons__item.button__item-logon 
+                a.auth-button__link Войти
+              
     .footer-text.footer-welcome-text (c) Петя Отверткин
